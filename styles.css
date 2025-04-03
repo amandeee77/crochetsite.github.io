@@ -107,6 +107,34 @@
     font-size: 1em;
     color: var(--dark-brown);
   }
+  .instruction-button {
+    display: inline-block;             /* Allows padding and margin to be applied like a block element */
+    padding: 12px 24px;                /* Provides sufficient clickable area and visual balance */
+    background-color: var(--forest-green); /* Uses the forest green variable for consistency */
+    color: var(--white);               /* Ensures the text contrasts well with the background */
+    text-align: center;                /* Centers the text inside the button */
+    text-decoration: none;             /* Removes the default underline from links */
+    font-weight: bold;                 /* Emphasizes the button text for better readability */
+    border: none;                      /* Removes any default border styling */
+    border-radius: 5px;                /* Rounds the corners for a friendly look */
+    cursor: pointer;                   /* Changes the cursor to a pointer on hover, signaling interactivity */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover and active states */
+    margin-top: 10px;                  /* Adds spacing above the button so it doesn't sit too close to other elements */
+  }
+  
+  .instruction-button:hover {
+    background-color: var(--woodland-brown); /* Changes the background to woodland brown on hover for visual feedback */
+    transform: scale(1.05);          /* Slightly enlarges the button on hover, indicating interactivity */
+  }
+  
+  .instruction-button:active {
+    transform: scale(0.98);          /* A brief scale down when clicked (active state) gives tactile feedback */
+  }
+  
+  .instruction-button:focus {
+    outline: 2px solid var(--woodland-brown); /* Provides a clear focus outline for keyboard navigation */
+    outline-offset: 4px;
+  }
   
   /* Footer */
   footer {
