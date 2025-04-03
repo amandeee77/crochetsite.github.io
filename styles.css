@@ -1,110 +1,139 @@
-/* General Styles */
-body {
+/* Define CSS Variables for easier color management */
+:root {
+    --sage-green: #9caf88;
+    --forest-green: #4a6940;
+    --woodland-brown: #705848;
+    --dark-brown: #2e2b23;
+    --white: #ffffff;
+  }
+  
+  /* General Styles */
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #9caf88; /* Sage green */
-    color: #2e2b23; /* Dark brown */
-    text-align: center; /* Centers all text */
+    background-color: var(--sage-green);
+    color: var(--dark-brown);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically (if full height is specified) */
-    min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #4a6940; /* Forest green */
-    color: #ffffff; /* White text */
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--forest-green);
+    color: var(--white);
     padding: 20px;
-}
-
-.header-text {
+  }
+  
+  /* Header text styling */
+  .header-text {
     text-align: center;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     margin: 0;
     font-size: 2.5em;
-}
-
-/* Navigation */
-nav ul {
+  }
+  
+  /* Navigation */
+  nav {
+    width: 100%;
+    background-color: var(--woodland-brown);
+  }
+  
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 10px;
-    background-color: #705848; /* Woodland brown */
     display: flex;
     justify-content: center;
-}
-
-nav li {
+  }
+  
+  nav li {
     margin: 0 15px;
-}
-
-nav a {
+  }
+  
+  nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white);
     font-weight: bold;
-}
-
-/* Main */
-main {
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effects for links */
+  nav a:hover {
+    color: var(--sage-green);
+  }
+  
+  /* Main */
+  main {
     padding: 20px;
-}
-/* Making sure smaller screens are responsive */
-@media (max-width: 768px) {
-    .product img {
-        width: 100px; /* Smaller image for mobile */
-    }
-    nav ul {
-        flex-direction: column; /* Stack links vertically */
-    }
-}
-
-
-/* Shop Product Styling */
-.product {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Shop Product Styling */
+  .product {
     margin: 20px;
     padding: 15px;
-    border: 2px solid #4a6940; /* Forest green border */
-    border-radius: 10px; /* Rounded edges for a welcoming feel */
-    background-color: #ffffff; /* White background for contrast */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 2px solid var(--forest-green);
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.product img {
+  }
+  
+  /* Better structure for product info */
+  .product img {
     width: 200px;
     height: auto;
-    border-radius: 5px; /* Slightly round image corners */
-}
-
-.product p {
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product img:hover {
+    transform: scale(1.05);
+  }
+  
+  .product p {
     margin: 10px 0;
     font-size: 1em;
-    color: #2e2b23;
-}
-
-/* Footer */
-footer {
+    color: var(--dark-brown);
+  }
+  
+  /* Footer */
+  footer {
+    width: 100%;
     text-align: center;
-    background-color: #705848; /* Woodland brown */
-    color: #ffffff;
+    background-color: var(--woodland-brown);
+    color: var(--white);
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center logo and text */
+    align-items: center;
     justify-content: center;
-}
-
-.footer-logo img {
-    height: 80px; /* Adjust size as needed */
+  }
+  
+  .footer-logo img {
+    height: 80px;
     width: auto;
-    margin-bottom: 10px; /* Space between logo and text */
-}
-
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+    .product img {
+      width: 100px;
+    }
+  }
+  
