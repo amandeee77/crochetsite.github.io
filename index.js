@@ -13,7 +13,7 @@ document.querySelectorAll('nav a').forEach(link => {
   // Alert when product is clicked
   document.querySelectorAll('.product').forEach(product => {
     product.addEventListener('click', () => {
-      alert('Thanks for exploring! Check back soon for more details.');
+    alert('Thanks for exploring! Did you know crocheting is basically wizardry with yarn? Check back soon for more details.');
     });
   });
   
